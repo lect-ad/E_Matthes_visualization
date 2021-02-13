@@ -4,7 +4,7 @@ from random_walk import RandomWalk
 
 
 while True:
-    rw = RandomWalk(500000)
+    rw = RandomWalk(100_000)
     rw.fill_walk()
 
     point_numbers = range(rw.num_points)
