@@ -15,8 +15,10 @@ with open(filename) as f:
 
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
-ax.plot(dates, high_temperatures, c='red')
-ax.plot(dates, low_temperatures, c='blue')
+ax.plot(dates, high_temperatures, c='red', alpha=0.6)
+ax.plot(dates, low_temperatures, c='blue', alpha=0.6)
+plt.fill_between(dates,high_temperatures, low_temperatures,
+                 facecolor='blue', alpha=0.2)
 plt.title('Daily Low and High Tempertures, 2018', fontsize=22)
 plt.xlabel('', fontsize=14)
 fig.autofmt_xdate()
